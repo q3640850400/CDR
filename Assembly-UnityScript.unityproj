@@ -45,8 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Cartoony_Clouds\Scripts\Cloud.js" />
-     <Compile Include="Assets\Cartoony_Clouds\Scripts\MoveCloud.js" />
+     <Compile Include="Assets\Resources\Cartoony_Clouds\Scripts\Cloud.js" />
+     <Compile Include="Assets\Resources\Cartoony_Clouds\Scripts\MoveCloud.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
