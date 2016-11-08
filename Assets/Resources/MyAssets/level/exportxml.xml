@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ROOT>
+	<table level="1" name="火球术" mode="free" x="10" y="10" z="10" mx="-1" my="-1" mz="-1" wait="3"/>
+	<table level="1" name="火球术" mode="free" x="20" y="20" z="20" mx="-1" my="-1" mz="-1" wait="6"/>
+	<table level="1" name="火球术" mode="free" x="40" y="40" z="20" mx="-1" my="-1" mz="-1" wait="9"/>
+</ROOT>
