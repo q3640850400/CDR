@@ -47,7 +47,9 @@
   <ItemGroup>
      <Compile Include="Assets\Resources\ImportAssets\Cartoony_Clouds\Scripts\Cloud.js" />
      <Compile Include="Assets\Resources\ImportAssets\Cartoony_Clouds\Scripts\MoveCloud.js" />
+     <None Include="Assets\Resources\MyAssets\level\testxml.xml" />
      <None Include="Assets\Resources\MyAssets\level\test1.xml" />
+     <None Include="Assets\Resources\MyAssets\level\exportxml.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>F:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

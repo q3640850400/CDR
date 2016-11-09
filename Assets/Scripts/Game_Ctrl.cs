@@ -37,7 +37,28 @@ public class Game_Ctrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		switch(state){
+		case 0:
+			{
+				break;
+			}
+		case 1:
+			{
+				timetick ();
+				if (list_node < GameList.Count) {
+					if (GameList [list_node].wait <= timecount) {
+						makeATK (GameList [list_node].name, new Vector3 (GameList [list_node].x, GameList [list_node].y, GameList [list_node].z));
+						list_node++;
+						//Debug.Log ("ddd");
+					}
+				}
+				break;
+			}
+		case 2:
+			{
+				break;
+			}
+		}
 	}
 	void ReadTMX(int level){//读取xml文件,并存入GameList里
 		XmlDocument doc = new XmlDocument();
@@ -69,15 +90,7 @@ public class Game_Ctrl : MonoBehaviour {
 	}
 	//倒计时
 	void countdown(){
-		GameBegin ();
-	}
-	void GameBegin(){
-		timetick ();
-		if (list_node < GameList.Count) {
-			if (GameList [list_node].wait <= timecount) {
-				makeATK (GameList [list_node].name, new Vector3 (GameList [list_node].x, GameList [list_node].y, GameList [list_node].z));
-			}
-		}
+		state = 1;
 	}
 	void timetick(){
 		timecount += Time.deltaTime;
@@ -92,7 +105,7 @@ public class Game_Ctrl : MonoBehaviour {
 	//ATKtheChi
 	void makeATK(string name,Vector3 des){
 		des.y = GameObject.Find ("PosSet").transform.position.y;//取得参考点的Y坐标
-		GameObject g = Resources.Load ("/MyAssets/Prefabs/" + name) as GameObject;
+		GameObject g = Resources.Load ("MyAssets/Prefabs/" + name) as GameObject;
 		GameObject.Instantiate (g, des, Quaternion.identity);
 	}
 	void init(){
